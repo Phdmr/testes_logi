@@ -1,2 +1,2 @@
 # testes_logi
-Testes para HTML e JavaScript
+Nestes repositório estarão testes em HTML e JavaScript para iniciar estudos nestas línguagens
