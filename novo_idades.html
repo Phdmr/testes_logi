@@ -3,22 +3,28 @@
 <script>
 
     function jumpLine() {
-        document.write("<br>")
+        document.write("<br>");
     }
 
-    var jLine = "<br>";
+    function mostra(algo){
+        document.write(algo);
+        jumpLine()
+    }
+
+    //var jLine = "<br>";
     
     var ano = 2021;
-    document.write("Flávio nasceu em " + (2016 - 39));
-    jumpLine()
-    document.write("Joaquim nasceu em " + (2016 - 20)+("<br>"));
-    document.write("Barney nasceu em " + (2016 - 40));
-	document.write("<br><br>");
+    mostra("Flávio nasceu em " + (2016 - 39));
+    //jumpLine()
+    mostra("Joaquim nasceu em " + (2016 - 20));
+    //jumpLine();
+    mostra("Barney nasceu em " + (2016 - 40)+"<br>");
+	//jumpLine();
 
-	document.write("Flávio tem "+(ano - 1977)+" anos<br>");
-	document.write("Joquin tem "+(ano - 1996)+" anos<br>");
+	mostra("Flávio tem "+(ano - 1977)+" anos");
+	mostra("Joquin tem "+(ano - 1996)+" anos");
 
 	ano+=12;
-	document.write("Barney tem "+(ano - 1976)+ " anos<br>");
+	mostra("Barney tem "+(ano - 1976)+ " anos");
     
 </script>
