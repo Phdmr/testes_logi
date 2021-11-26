@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+            document.write("<br><hr><br>");
+        }
+
+    function mostra(frase) {
+        document.write("<big>"+frase+"</big>");
+        pulaLinha();
+    }
+
+    function imcG(peso,altura){
+        var imcFi = peso/(altura*altura);
+        return imcFi
+        
+    }
+
+    var pesoPedro = 74;
+    var alturaPedro = 1.8;
+    var peso2 = 88;
+    var altura2 = 1.65;
+    var peso3 = 65;
+    var altura3 = 1.85;
+
+    //var imcPedro = (pesoPedro/alturaPedro)*alturaPedro;
+    mostra("O imc de Pedro é "+imcG(pesoPedro,alturaPedro));
+    pulaLinha();
+    var imcPedro = imcG(74,1.85)
+    mostra("O Novo IMC de Pedro é "+imcPedro);
+    pulaLinha();
+    mostra("A soma dos imc's é "+(imcG(pesoPedro,alturaPedro)
+    +imcG(peso2,altura2)+imcG(peso3,altura3)));
+
+</script>
