@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function jumpLine() {
+        document.write("<br>");
+    }
+
+    function mostra(algo){
+        document.write(algo);
+        jumpLine();
+    }
+    var portChegam = 1500;
+    var anoAtual = 2021;
+    var idadeIniciaFilhos = 28;
+    var geracao = Math.round((anoAtual-portChegam)/idadeIniciaFilhos);
+
+    mostra("De 1500 até 2021 se passaram aproximaadmente "
+    +geracao+" gerações")
+
+</script>
