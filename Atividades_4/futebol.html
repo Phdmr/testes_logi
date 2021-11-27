@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+            document.write("<br><hr><br>");
+        }
+
+    function mostra(frase) {
+        document.write("<big>"+frase+"</big>");
+        pulaLinha();
+    }
+    
+    function calculaPontos(vitoria, empate){
+        var pontos = vitoria*3 + empate;
+        return pontos;
+    }
+
+    var vitorias = parseInt(prompt("Digite o numero de vitorias"));
+    var empates = parseInt(prompt("Digite o numero de empates"));
+
+    mostra("A quantidade de pontos é "+calculaPontos(vitorias,empates))
+
+
+</script>
