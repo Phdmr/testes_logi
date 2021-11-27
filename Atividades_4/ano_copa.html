@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+            document.write("<br><hr><br>");
+        }
+
+    function mostra(frase) {
+        document.write("<big>"+frase+"</big>");
+        pulaLinha();
+    }
+
+    function anosDeCopa(anoIni,anoFin){
+        while(anoIni<=anoFin){
+            alert("Houve copa em "+anoIni);
+            anoIni+=4;
+        }
+    }
+    var anoCopa = 1930;
+    var limi = parseInt(prompt("Digite o ano limite"))
+    anosDeCopa(anoCopa,limi);
+
+
+</script>
