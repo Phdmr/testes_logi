@@ -17,10 +17,26 @@
         
     }
 
-    var nome = prompt("Informe o seu nome")
+    function resultadoImc(valor){
+        if(valor <18.5){
+            return mostra("Seu IMC é abaixo do recomendado");
+        }
+        if(valor>35){
+            return mostra("Seu IMC é acima do recomendado");
+        }
+        if (valor>=18.5 && valor<=35){
+            return mostra("Seu IMC está na média");
+        }
+        
+    }
+
+    var nome = prompt("Informe o seu nome");
     var alturaInformada = prompt(nome+", informe a sua altura");
     var pesoInformado = prompt(nome+", agora informe o seu peso");
     var imc = imcG(pesoInformado, alturaInformada);
     //alert(nome+", o seu IMC é: "+imc);
     mostra(nome+", o seu IMC é: "+imc);
+
+    resultadoImc(imc);
+
 </script>
