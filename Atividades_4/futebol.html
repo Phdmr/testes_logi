@@ -13,13 +13,38 @@
     
     function calculaPontos(vitoria, empate){
         var pontos = vitoria*3 + empate;
+
         return pontos;
     }
 
+    function comparaRendimento(pontoPassado,pontoAtual){
+        if(pontoAtual>pontoPassado){
+            return mostra("O time está melhor que ano passado!")
+        }
+        if(pontoAtual<pontoPassado){
+            return mostra("O time está pior que ano passado")
+        }
+        else{
+            mostra("O time está igual a ano passado")
+        }
+    }
+    
     var vitorias = parseInt(prompt("Digite o numero de vitorias"));
     var empates = parseInt(prompt("Digite o numero de empates"));
+    var pontosAnterior = parseInt(prompt("Digite a pontuação do "+
+    "ano passado"));
 
-    mostra("A quantidade de pontos é "+calculaPontos(vitorias,empates))
+    var pontosTotais = calculaPontos(vitorias,empates);
+    
+    mostra("A quantidade de pontos é "
+    +pontosTotais);
 
+    comparaRendimento(pontosAnterior,pontosTotais);
+
+
+
+
+
+    
 
 </script>
