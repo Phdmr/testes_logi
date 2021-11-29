@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+            document.write("<br><hr><br>");
+        }
+
+    function mostra(frase) {
+        document.write("<big>"+frase+"</big>");
+        pulaLinha();
+    }
+
+    function recebeNum(){
+        cout = 0;
+        while (cout==0){
+            var numero = parseInt(prompt("Digite um número para "
+        +"a tabuada"));
+            if(isNaN(numero)){
+                alert("Digite um número válido");
+            }
+            else{
+                cout+=1;
+            }
+        }
+        return numero
+    }
+    function tabuada(numero){
+        for(var multiplicador=0;multiplicador<=10;multiplicador+=1){
+            mostra(numero+" vezes "+multiplicador+" é: "+numero*multiplicador)
+        
+        }
+        mostra("Fim")
+    }
+
+    var numero = recebeNum();
+    tabuada(numero);
+
+</script>

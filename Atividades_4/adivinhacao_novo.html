@@ -11,24 +11,35 @@
         pulaLinha();
     }
 
-    function passaChute(numeChute,numePens){
-        if(numeChute==numePens){
-            return mostra("Você acertou, o numero é "+numePens);
+    function passaChute(numePens){
+        tent = 0;
+        
+        while(tent<3){
+            var chute = parseInt(prompt("Digite seu chute"));
+            if(chute==numePens){
+                mostra("Você acertou, o numero é "+numePens);
+                break;
+                
+            }
+            else{
+                alert("Você errou!");
+                tent++;
+            }
+        
         }
-        else{
-            return mostra("Você errou! O número deveria ser "
-            +numePens);
+        if(chute!=numePens){
+            mostra("Numero de tentativas excedidos, a resposta era "+numePens);
         }
     }
     
     function sorteio(nu){
         return Math.round(Math.random()*nu);
     }
-    //var numeroPensado = Math.round(Math.random()*10);
+    
     var limite = parseInt(prompt("Digite o número máximo"));
     var numeroPensado = sorteio(limite);
-    var chute = parseInt(prompt("Digite seu chute"));
-    passaChute(chute,numeroPensado);
+    
+    passaChute(numeroPensado);
 
 
 </script>
