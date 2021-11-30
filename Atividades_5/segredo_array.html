@@ -4,6 +4,41 @@
 <button>Compare com o segredo</button>
 
 <script>
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    var rebu = document.querySelector("button")
+    
+    rebu.onclick = verif;
+    function pulaLinha() {
+            document.write("<br><hr><br>");
+        }
+
+    function mostra(frase) {
+        document.write("<big>"+frase+"</big>");
+        pulaLinha();
+    }
+
+    function verif(){
+        var achou = false;
+        for(var indi = 0;indi < segredos.length;indi++){
+            if(input.value == segredos[indi]){
+                alert("Você acertou, o valor do segredo é "+segredos[indi]);
+                achou = true;
+                //mostra("Segredo: "+segredos[indi])
+                break;
+            }
+                
+        } 
+        
+        if(achou == false){
+            alert("Você errou!");
+        }
+        input.value = "";
+        input.focus();
+    }
+
     var quant = parseInt(prompt("Digite a quantidade de segredos"))
     var segredos = [];
     segredos.push();
@@ -11,39 +46,17 @@
     while(nume<=quant){
         var ach = false;
         var numeroAle = Math.round(Math.random()*10);
-        for(var posi = 0; posi<segredos.length;posi++){
+        for(var posi = 0; posi<=segredos.length;posi++){
             if(segredos[posi] == numeroAle){
-                
+                ach = true;
+                break
             }
         }
-    }
-
-    var input = document.querySelector("input");
-    input.focus();
-    
-    function verif(){
-        var achou = false;
-        for(var indi = 0;indi < segredos.length;indi++){
-            if(input.value == segredos[indi]){
-                alert("Você acertou, o valor do segredo é "+segredos[indi]);
-                achou = true;
-                break;
-            }
-                
-            }
-            
-        
-        if(achou == false){
-                alert("Você errou!");
+        if(ach == false){
+            segredos.push(numeroAle);
+            nume++;
         }
-        input.value = "";
-        input.focus();
+
     }
-
-    
-
-    var rebu = document.querySelector("button")
-    
-    rebu.onclick = verif;
     
 </script>
