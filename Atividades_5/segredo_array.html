@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Compare com o segredo</button>
+
+<script>
+    var quant = parseInt(prompt("Digite a quantidade de segredos"))
+    var segredos = [];
+    segredos.push();
+    var nume = 1;
+    while(nume<=quant){
+        var ach = false;
+        var numeroAle = Math.round(Math.random()*10);
+        for(var posi = 0; posi<segredos.length;posi++){
+            if(segredos[posi] == numeroAle){
+                
+            }
+        }
+    }
+
+    var input = document.querySelector("input");
+    input.focus();
+    
+    function verif(){
+        var achou = false;
+        for(var indi = 0;indi < segredos.length;indi++){
+            if(input.value == segredos[indi]){
+                alert("Você acertou, o valor do segredo é "+segredos[indi]);
+                achou = true;
+                break;
+            }
+                
+            }
+            
+        
+        if(achou == false){
+                alert("Você errou!");
+        }
+        input.value = "";
+        input.focus();
+    }
+
+    
+
+    var rebu = document.querySelector("button")
+    
+    rebu.onclick = verif;
+    
+</script>
